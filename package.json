@@ -1,8 +1,8 @@
 {
   "name": "jira-branching",
-  "displayName": "JIRA Branch Creator",
+  "displayName": "Velaris Branch Creator",
   "publisher": "BuddhikaGamage",
-  "description": "Create Git branches from JIRA ticket IDs",
+  "description": "Create Git branches using JIRA ticket IDs, following the naming convention used in Velaris",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.99.0"

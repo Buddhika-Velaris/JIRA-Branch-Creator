@@ -1,9 +1,9 @@
-# 🧙‍♂️ JIRA Branch Creator
+# 🧙‍♂️ Velaris Branch Creator
 
 > "One does not simply name a branch without consulting the JIRA overlords."  
 > — Boromir, probably
 
-A VS Code extension that creates Git branches from JIRA ticket IDs with proper naming conventions.
+A VS Code extension that creates Git branches from JIRA ticket IDs, following the naming conventions used in Velaris.
 
 ![END NOTE](https://cdn.glitch.global/51637606-60d9-484c-a941-c3ad0567928a/ezgif-51b63a1e924279.gif?v=1745070466165)
 
@@ -43,7 +43,7 @@ fy25/sprint07/WAR-7080/fix-task-name-bug
 You can install this extension through:
 
 1. The VS Code Marketplace
-2. Search for "JIRA Branch Creator"
+2. Search for "Velaris Branch Creator"
 
 ### 🔧 How to Configure
 
@@ -66,7 +66,7 @@ Example settings.json configuration:
 
 1. Log in to your Atlassian account at [id.atlassian.com](https://id.atlassian.com/manage-profile/security/api-tokens)
 2. Click "Create API token"
-3. Enter a label for your token (e.g., "VS Code JIRA Branch Creator")
+3. Enter a label for your token (e.g., "vscode")
 4. Copy the generated token
 
 ### 🚒 Troubleshooting
