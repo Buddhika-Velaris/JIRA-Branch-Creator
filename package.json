@@ -1,0 +1,96 @@
+{
+  "name": "jira-branching",
+  "displayName": "JIRA Branch Creator",
+  "publisher": "BuddhikaGamage",
+  "description": "Create Git branches from JIRA ticket IDs",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "icon": "logo.png",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "jira",
+    "git",
+    "branch",
+    "ticket",
+    "atlassian"
+  ],
+  "galleryBanner": {
+    "color": "#0052CC",
+    "theme": "dark"
+  },
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "jira-branching.createBranch",
+        "title": "JIRA: Create Branch from Ticket"
+      },
+      {
+        "command": "jira-branching.testJiraApi",
+        "title": "JIRA: Test API Response"
+      }
+    ],
+    "configuration": {
+      "title": "JIRA Branch Creator",
+      "properties": {
+        "jira-branching.baseUrl": {
+          "type": "string",
+          "default": "",
+          "description": "The base URL of your JIRA instance (e.g., https://yourcompany.atlassian.net)"
+        },
+        "jira-branching.email": {
+          "type": "string",
+          "default": "",
+          "description": "Your JIRA email address"
+        },
+        "jira-branching.apiToken": {
+          "type": "string",
+          "default": "",
+          "description": "Your JIRA API token"
+        },
+        "jira-branching.branchPrefix": {
+          "type": "string",
+          "default": "fy25/great-merge",
+          "description": "Prefix to be added to all branch names (used only if no sprint data is provided from JIRA)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^9.23.0",
+    "typescript": "^5.8.2",
+    "ts-loader": "^9.5.2",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Buddhika-Velaris/JIRA-Branch-Creator"
+  }
+}
